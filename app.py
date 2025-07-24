@@ -9,7 +9,7 @@ from langchain.schema import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 from pypdf import PdfReader
 
-genai.configure(api_key="AIzaSyCVrrwxoQ5O6TMMCQL_kbfMW9Cpw9LoXcw")
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 # Configure Embedding Model "sentence-transformers/all-MiniLM-L6-v2"
